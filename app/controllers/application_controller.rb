@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
       begin
         decoded_token = JWT.decode(
                                   token,
-                                  Rails.application.credentials.fetch(:secret_key_base),
+                                  "butter",
                                   true,
                                   { algorithm: 'HS256'}
                                   )
